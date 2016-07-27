@@ -11,6 +11,7 @@ docker run \
 -v $current_dir/conf/conf.d:/etc/nginx/conf.d \
 -v $current_dir/log/error.log:/var/log/nginx/error.log \
 -v $current_dir/log/access.log:/var/log/nginx/access.log \
+--link=php-fpm:nginx-php-fpm
 -p 8080:80 \
 -d victorruan/nginx
 
